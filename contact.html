@@ -164,16 +164,17 @@
     </script>
     <script>
       function sendmail(){
-        const name = document.getElementById('name').value
-        const email = document.getElementsById('email').value
+        const name = document.getElementById('name');
+        const email = document.getElementsById('email');
         const number = document.getElementsById('phonenumber').value
         const Message = document.getElementsById('comment').value
 
-        fetch('/mail',{
+
+        fetch('/nodemailer',{
           method:'post',
-          headers:{
-            'Content-Type': 'appliacation/json;charset=utf-8'
-          },
+          //headers:{
+          //  'Content-Type': 'appliacation/json;charset=utf-8'
+          //},
           body: JSON.stringify({
             Name,
             Email,
